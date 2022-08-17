@@ -286,10 +286,20 @@ header .hide {
   border-radius: 0.625rem;
   padding: 0 0.625rem;
 }
-.product-info .buttons .units img:hover {
+.product-info .buttons .units .minus, .product-info .buttons .units .plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.product-info .buttons .units .minus img, .product-info .buttons .units .plus img {
+  pointer-events: none;
+}
+.product-info .buttons .units .minus:hover, .product-info .buttons .units .plus:hover {
   cursor: pointer;
 }
-.product-info .buttons .units img:active {
+.product-info .buttons .units .minus:active, .product-info .buttons .units .plus:active {
   transform: scale(0.9);
 }
 .product-info .buttons .add-to-cart {
