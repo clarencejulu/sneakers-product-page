@@ -1,0 +1,121 @@
+@media (max-width: 1200px){
+    .product-body{
+        justify-content: space-between;
+        padding: 4.375rem 1.44rem 0;
+    }
+}
+
+@media (max-width: 1110px){
+    header{
+        margin: 0 2.375rem;
+    }
+    .product-body{
+        margin: 0 2.375rem;
+    }
+}
+
+@media (max-width: 990px){
+    :root{
+        font-size: 13px;
+    }
+}
+@media (max-width: 890px){
+    :root{
+        font-size: 11.6px;
+    }
+}
+
+@media (max-width: 800px){
+    header{
+        margin: 0 5rem;
+    }
+    .product-body{
+        margin: 0 5rem;
+        flex-direction: column;
+        align-items: center;
+        .product-images{
+            width: 33rem;
+            // flex-direction: row;
+            .current-image{
+                height: 33rem;
+            }
+        }
+        .product-info{
+            width: 33.5rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+    .body-overlay{
+        .product-images{
+            width: 41rem;
+            .current-image{
+                height: 41rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 540px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        header{
+            width: 33rem;
+            margin: 0;
+        }
+        .body-overlay{
+            .product-images{
+                width: 33rem;
+                .current-image{
+                    height: 33rem;
+                }
+            }
+        }
+    }
+}
+
+
+$sizes-for-smaller-widths: 430px 27.5rem, 400px 26.5rem;
+@each $screen, $size in $sizes-for-smaller-widths{
+    @media (max-width: $screen){
+        body{
+            header{
+                width: $size;
+            }
+            .product-body{
+                .product-images{
+                    width: $size;
+                    .current-image{
+                        height: $size;
+                    }
+                }
+                .product-info{
+                    width: $size;
+                    .buttons{
+                        flex-direction: column;
+                        align-items: center;
+                        .units{
+                            width: 100%;
+                            margin-bottom: 1.3rem;
+                        }
+                        .add-to-cart{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .body-overlay{
+                .product-images{
+                    width: $size;
+                    .current-image{
+                        height: $size;
+                    }
+                }
+                .images{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
