@@ -94,7 +94,7 @@ header .smallscreen-navbar {
   background: #fff;
   box-shadow: 0 1.25rem 3.125rem -1.25rem rgba(29, 32, 38, 0.5);
   left: 0;
-  width: 10.25rem;
+  width: 13.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,11 +173,8 @@ header .cart .cart-body.full .checkout {
   color: #fff;
 }
 header .cart .cart-body.full .checkout:hover {
-  background: #ff8b33;
+  background-color: #ff8b33;
   box-shadow: 0 0 0.94rem 0.19rem hsl(26deg, 100%, 55%);
-}
-header .cart .cart-body.full .checkout:active {
-  box-shadow: 0 0 1.25rem 0.31rem hsl(26deg, 100%, 55%);
 }
 header .hide {
   display: none;
@@ -290,8 +287,8 @@ header .hide {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 2rem;
+  height: 100%;
 }
 .product-info .buttons .units .minus img, .product-info .buttons .units .plus img {
   pointer-events: none;
@@ -443,6 +440,10 @@ header .hide {
   header {
     margin: 0 5rem;
   }
+  header .cart .cart-body.full .checkout:hover {
+    background-color: hsl(26deg, 100%, 55%);
+    box-shadow: none;
+  }
   .product-body {
     margin: 0 5rem;
     flex-direction: column;
@@ -457,6 +458,11 @@ header .hide {
   .product-body .product-info {
     width: 33.5rem;
     margin-bottom: 2.5rem;
+  }
+  .product-body .product-info .buttons .add-to-cart:hover {
+    cursor: pointer;
+    background-color: hsl(26deg, 100%, 55%);
+    box-shadow: 0 1.25rem 3.125rem -1.25rem hsl(26deg, 100%, 55%);
   }
   .body-overlay .product-images {
     width: 41rem;

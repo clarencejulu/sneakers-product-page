@@ -157,7 +157,6 @@ buttons.addEventListener('click', () => {
         }
     }
     else if(event.target.classList.contains('add-to-cart')){
-        console.log('add to cart');
         if(+(unitsValue.innerText) == 0){
             const message = document.createElement('div');
             message.classList.add('toast-message');
@@ -168,7 +167,7 @@ buttons.addEventListener('click', () => {
                 message.remove();
             },3000);
         }
-        else{
+        else{         
             if(cartBody.classList.contains('empty')){
                 cartBody.classList.remove('empty');
                 cartBody.classList.add('full');
@@ -196,6 +195,14 @@ buttons.addEventListener('click', () => {
                 cartBody.innerHTML = "Your cart is empty";
                 changeCart('empty');
                 })
+
+                const message = document.createElement('div');
+                message.classList.add('toast-message');
+                document.body.appendChild(message);
+                message.innerText = `Items have been added to cart`;
+                setTimeout(()=>{
+                    message.remove();
+                },2000);
             }
 
             else if(cartBody.classList.contains('full')){

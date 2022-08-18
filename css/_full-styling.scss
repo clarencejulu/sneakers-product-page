@@ -106,7 +106,7 @@ header{
     .smallscreen-navbar{
         @include box;
         left: 0;
-        width: 10.25rem; 
+        width: 13.25rem; 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -179,11 +179,8 @@ header{
                 color: #fff;
             }
             .checkout:hover{
-                background: lighten($orange, 5%);
+                background-color: lighten($orange, 5%);
                 box-shadow: 0 0 0.94rem 0.19rem $orange;
-            }
-            .checkout:active{
-                box-shadow: 0 0 1.25rem 0.31rem $orange;
             }
         }
     }
@@ -294,8 +291,8 @@ header{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 1.2rem;
-                height: 1.2rem;
+                width: 2rem;
+                height: 100%;
                 img{
                     pointer-events: none;
                 }

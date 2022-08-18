@@ -1,3 +1,5 @@
+@use 'full-styling';
+
 @media (max-width: 1200px){
     .product-body{
         justify-content: space-between;
@@ -28,6 +30,14 @@
 @media (max-width: 800px){
     header{
         margin: 0 5rem;
+        .cart{
+            .cart-body.full{
+                .checkout:hover{ //remove hover
+                    background-color: full-styling.$orange;
+                    box-shadow: none;
+                }
+            }
+        }
     }
     .product-body{
         margin: 0 5rem;
@@ -35,7 +45,6 @@
         align-items: center;
         .product-images{
             width: 33rem;
-            // flex-direction: row;
             .current-image{
                 height: 33rem;
             }
@@ -43,6 +52,13 @@
         .product-info{
             width: 33.5rem;
             margin-bottom: 2.5rem;
+            .buttons{
+                .add-to-cart:hover{//remove hover
+                    cursor: pointer;
+                    background-color: full-styling.$orange;
+                    box-shadow: 0 1.25rem 3.125rem -1.25rem full-styling.$orange;
+                }
+            }
         }
     }
     .body-overlay{
