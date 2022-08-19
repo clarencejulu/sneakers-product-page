@@ -222,7 +222,7 @@ buttons.addEventListener('click', () => {
 })
 
 function checkout(){
-    alert("There is no checkout page yet. Thank you for checking out this project!");
+    alert("There is no checkout page yet. Thank you for viewing this project!");
 }
 
 function changeCart(isCartEmpty){
